@@ -359,8 +359,7 @@ split
 
 isLoading
 {
-    // loading and options pause
-    return current.loading_active || current.options_active;
+    return current.cutscene_active || current.loading_active || current.options_active;
 }
 
 onReset
