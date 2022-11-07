@@ -335,10 +335,7 @@ start
                 vars.blacklisted_doors.Add(2, Tuple.Create(1289, 1294));
                 vars.blacklisted_doors.Add(3, Tuple.Create(1292, 1298));
                 vars.blacklisted_doors.Add(4, Tuple.Create(1303, 1304));
-
-                // debug
-                print("Separate Ways initialized!");
-
+                
                 // start
                 return true;
             }
@@ -349,10 +346,7 @@ start
             if(settings["assignment_ada"] && old.assignment_start == 87 && current.assignment_start < 87)
             {
                 vars.campaign = "assignment_ada";
-
-                // debug
-                print("Assignment Ada initialized!");
-
+                
                 // start
                 return true;
             }
