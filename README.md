@@ -7,12 +7,14 @@ New auto splitter for Resident Evil 4 (PC/2007) version. Before you start using 
    - [x] JPN/NTSC - version 1.1.0
 
 ## ASL Features
-   - Auto Start & Reset.
-   - Load Time Removal (LTR)
-   - Chapter End Auto Split
-   - Key items Auto Split
-   - Plaga Samples Auto Split (Assignment Ada)
-   - Door Auto Split
+   - Auto Start & Reset
+   - Load Time Removal (LRT)
+   - Can start at the beginning of each chapter
+   - Chapter End Split
+   - Key items Split
+   - Plaga Samples Split (in Assignment Ada campaign)
+   - Door Split
 
 ## Credits
-  - [Gabriel Dornelles]() - (Creator/Developer)
+  - [Gabriel Dornelles](https://www.youtube.com/channel/UC9CpXumerFwvf4tynMoglxA) - (Creator/Developer)
+  - [Wagner Brasil](https://www.youtube.com/channel/UCpwbsyYkOPj0CijdwjDXNPA) - (Testing/Bug reporting)
