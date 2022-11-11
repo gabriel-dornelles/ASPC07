@@ -1,20 +1,25 @@
-## ASPC07
-The auto splitter for Resident Evil 4 (PC/2007) version. Before you start using it, please check if your game executable is compatible to avoid issues. You can get more information in [PC/2007 - Resources](https://www.speedrun.com/re4pc07/resources)
+## ASPC07 (Auto Splitter PC/07)
 
-## Compatible game versions
-   - [x] EUR/PAL - version 1.0.0
-   - [x] EUR/PAL - version 1.1.0
-   - [x] JPN/NTSC - version 1.1.0
+The auto splitter for Resident Evil 4 (PC/2007) version. Before you start using it, please check if your game executable is compatible to avoid issues. You can get more information in [Resident Evil 4 PC/07 - Resources](https://www.speedrun.com/re4pc07/resources).
 
 ## ASL Features
-   - Auto Start & Reset
-   - Load Time Removal
-   - Can start at the beginning of each chapter
-   - Chapter End Split
-   - Key items Split
-   - Plaga Samples Split (in Assignment Ada campaign)
-   - Door Split
+   - Timer
+      - [x] Auto Start
+      - [x] Auto Reset
+      - [x] Load Time Removal (LTR)
+      - [x] Start at the begining of each chapter (Main Campaign & Separate Ways)
+   
+   - Auto Splitter
+      - [x] Chapter End
+      - [x] Key items
+      - [x] Plaga Samples (in Assignment Ada campaign)
+      - [x] Doors
+
+## Compatible game versions
+   - EUR/PAL - version 1.0.0
+   - EUR/PAL - version 1.1.0
+   - JPN/NTSC - version 1.1.0
 
 ## Credits
-  - [Gabriel Dornelles](https://www.youtube.com/channel/UC9CpXumerFwvf4tynMoglxA) - (Creator/Developer)
+  - [Gabriel Dornelles](https://github.com/gabriel-dornelles) - (Creator/Developer)
   - [Wagner Brasil](https://www.youtube.com/channel/UCpwbsyYkOPj0CijdwjDXNPA) - (Testing/Bug reporting)
