@@ -1,4 +1,4 @@
-// last update: 07/11/2022
+// last update: 11/11/2022
 // thanks to Wagner Brasil for reporting bugs in split
 
 state("game", "1.0.0 (EUR/PAL)")
@@ -249,10 +249,10 @@ init
 
 update
 {
-    if(vars.campaign != String.Empty && vars.chapters_count == 0)
+    if(vars.campaign == "main_campaign" && vars.chapters_count == 0 && current.stage_id_01 != 256)
     {
-        if(old.stage_id_01 == 518 && current.stage_id_01 == 525) vars.chapters_count = 9;       // chapter 3-4
-        else if(old.stage_id_01 == 518 && current.stage_id_01 == 528) vars.chapters_count = 10; // chapter 4-1
+        if(old.stage_id_01 == 518 && current.stage_id_01 == 525) vars.chapters_count = 9;  // chapter 3-4
+        if(old.stage_id_01 == 518 && current.stage_id_01 == 528) vars.chapters_count = 10; // chapter 4-1
     }
 }
 
@@ -306,9 +306,6 @@ start
                 vars.blacklisted_doors.Add(15, Tuple.Create(796, 800));
                 vars.blacklisted_doors.Add(16, Tuple.Create(818, 817));
 
-                // debug
-                print("Main Campaign initialized!");
-
                 // start
                 return true;
             }
@@ -320,7 +317,6 @@ start
             {
                 vars.campaign = "separate_ways";
 
-                // set chapter
                 switch((int)current.stage_id_02)
                 {
                     case 1280: vars.chapters_count = 0; break;
@@ -330,13 +326,11 @@ start
                     case 1304: vars.chapters_count = 4; break;
                 }
 
-                // update blacklisted doors
                 vars.blacklisted_doors.Add(1, Tuple.Create(1283, 1286));
                 vars.blacklisted_doors.Add(2, Tuple.Create(1289, 1294));
                 vars.blacklisted_doors.Add(3, Tuple.Create(1292, 1298));
                 vars.blacklisted_doors.Add(4, Tuple.Create(1303, 1304));
-                
-                // start
+
                 return true;
             }
         }
@@ -346,8 +340,6 @@ start
             if(settings["assignment_ada"] && old.assignment_start == 87 && current.assignment_start < 87)
             {
                 vars.campaign = "assignment_ada";
-                
-                // start
                 return true;
             }
         }
@@ -376,7 +368,7 @@ split
         }
 
         // plaga samples split
-        if(current.plaga_samples_01 > old.plaga_samples_01 || current.plaga_samples_02 > old.plaga_samples_02 && vars.campaign == "assignment_ada")
+        if(vars.campaign == "assignment_ada" && (current.plaga_samples_01 > old.plaga_samples_01 || current.plaga_samples_02 > old.plaga_samples_02))
         {
             if(!vars.collected_items.Contains(current.plaga_samples_01) && settings.ContainsKey("assignment_ada_plaga_sample_" + current.plaga_samples_01) && settings["assignment_ada_plaga_sample_" + current.plaga_samples_01])
             {
@@ -437,7 +429,7 @@ onReset
 
 reset
 {
-    // separate ways reset when load a new game
+    // reset when load a new game in separate ways
     if(vars.campaign == "separate_ways" && current.stage_id_02 == 1280)
     {
         if(current.merchant_screen != old.merchant_screen && current.merchant_screen > 0)
