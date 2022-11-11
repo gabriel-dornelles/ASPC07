@@ -20,6 +20,9 @@ The auto splitter for Resident Evil 4 (PC/2007) version. Before you start using 
    - EUR/PAL - version 1.1.0
    - JPN/NTSC - version 1.1.0
 
+## Download (Latest Version)
+[ASPC07 v1.0.4](https://github.com/gabriel-dornelles/ASPC07/releases/download/v1.0.4/ASPC07.asl)
+
 ## Credits
   - [Gabriel Dornelles](https://github.com/gabriel-dornelles) - (Creator/Developer)
   - [Wagner Brasil](https://www.youtube.com/channel/UCpwbsyYkOPj0CijdwjDXNPA) - (Testing/Bug reporting)
